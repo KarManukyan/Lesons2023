@@ -5,11 +5,14 @@ class human
 {
 	std::string name;
 	int age;
+
 	public:
+		static int count;
 		human(std::string nam,int ag)
 		{
 			name =nam;
 			age = ag;
+			count++;
 		}
 		std::string get_name()
 		{
@@ -21,6 +24,7 @@ class human
 		}
 };
 void sorting(human arr[],int n);
+int human::count = 0;
 int main()
 {
 	human h1 ("John",25);
@@ -29,6 +33,7 @@ int main()
 	human h4("Herbert",29);
 	human h5("Ann",22);
 	human arr[5] = {h1,h2,h3,h4,h5};
+	std::cout << h5.count << std::endl;
 	sorting(arr,5);
 	return 0;
 }
