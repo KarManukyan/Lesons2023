@@ -25,16 +25,19 @@ class Smartarray
 		{
 			delete [] m_array;
 		}
-		int get_size()				// get lenght of array
+
+		int get_size()						// get lenght of array
 		{
 			return m_size;
 		}
-		int get_el(int index)
+
+		int get_el(int index)					// returning element from the given position 
 		{
 			assert(index >= 0 && m_size > index);
 			return m_array[index];
 		}
-		void change_capacity()
+
+		void change_capacity()					// increase working area / capacity / 
 		{	
 		if (m_capacity == 0)
 		{
@@ -52,7 +55,8 @@ class Smartarray
 			m_array = tmp_arr;
 		}
 		}
-		void push_back(int num)
+
+		void push_back(int num)						// adding element from back
 		{
 			if (m_size < m_capacity)
 			{
@@ -60,7 +64,8 @@ class Smartarray
 				m_array[m_size-1]=num;
 			}
 		}
-		void pop()
+
+		void pop()							// deleting last element in the array
 		{
 			if (m_size ==0)
 			{
@@ -71,9 +76,9 @@ class Smartarray
 				m_size--;
 			}
 		}
-		void insert(int index, int num )
-		{
 
+		void insert(int index, int num )				// inserting element at the selected position / index /
+		{
 			m_size++;
 			if (m_size >= m_capacity)
 			{
@@ -84,10 +89,10 @@ class Smartarray
 				m_array[i]=m_array[i-1];
 			}
 			m_array[index] = num;
-			//m_size++;
 		}
 };
-void print_array(Smartarray & array)
+
+void print_array(Smartarray & array)						// printing content of array
 {
 	for (int i =0; i < array.get_size(); i++)
 	{
@@ -98,7 +103,6 @@ void print_array(Smartarray & array)
 int main()
 {
 	Smartarray arr;
-//	print_array(arr);
 	arr.push_back(5);
 	arr.push_back(4);
 	arr.push_back(3);
