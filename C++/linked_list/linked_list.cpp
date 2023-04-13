@@ -104,8 +104,8 @@ int List::get_size()								// Returning count of list`s members
 	return size;
 }
 	
-bool List::is_empty()								// Returning False if the list is empty
-{										// Returning True if there are some members
+bool List::is_empty()								// Returning True if the list is empty
+{										// Returning False if there are some members
 	if (first == nullptr)
 	{
 		return true;
