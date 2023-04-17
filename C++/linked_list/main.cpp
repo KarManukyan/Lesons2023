@@ -17,5 +17,8 @@ int main()
 	std::cout <<"Deleting first member ." << std::endl;
 	l.pop_front();
 	l.print();
+	List list(l);
+	list.insert(1,100);
+	list.print();
 	return 0;
 }

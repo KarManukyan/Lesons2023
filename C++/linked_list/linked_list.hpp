@@ -31,6 +31,8 @@ public:
 
 	bool is_empty();			// Checking state and return False if the list is empty
 	
+	List(const List& cp_list);		// Copy constructor
+
 	void print();				// Printing elements of list
 	
 	~List();				//Destructer wich is deleted the list

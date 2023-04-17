@@ -112,7 +112,20 @@ bool List::is_empty()								// Returning True if the list is empty
 	}
 	return false;
 }
-	
+
+List::List(const List& cp_list)							// Copy cosntructer wich is create a new List type object with same values
+{
+	size = 0;
+	first = nullptr;
+	Node* n = cp_list.first;
+	for (int i = 0; i < cp_list.size; i++)
+	{
+		this->push_back(n->m_data);
+		n = n->m_next_ptr;
+	}
+	assert(this != &cp_list);
+}
+
 void List::print()								// Printing list members
 {
 	Node* n = first;
@@ -125,6 +138,7 @@ void List::print()								// Printing list members
 }
 List::~List()									// Destructer wich is deleting list members one by one from memory
 {
+	assert(size > 0 && "The list is empty.");
 	while(size)
         {
 		Node *n = first->m_next_ptr;
