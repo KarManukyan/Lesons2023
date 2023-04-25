@@ -20,7 +20,6 @@ void Stack::pop()								// Deleting last added member from stack. If the stack 
 	delete first;
 	first = n;
 	size--;
-	std::cout<< tmp << std::endl;
 }
 	
 void Stack::push(int data)							// Adding member
@@ -52,7 +51,7 @@ bool Stack::is_empty()								// Returning True if the stack is empty
 	return false;
 }
 
-void Stack::print()								// Printing stack`s first members
+void Stack::top()								// Printing stack`s first members
 {	assert(size > 0 && "The Stack is empty.");
 	Node* n = first;
 	std::cout<< n-> m_data << std::endl;

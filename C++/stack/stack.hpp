@@ -25,7 +25,7 @@ public:
 
 	bool is_empty();			// Checking state and return False if the stack is empty
 	
-	void print();				// Printing elements of stack
+	void top();				// Printing elements of stack
 	
 	~Stack();				//Destructer wich is deleted the stack
 
