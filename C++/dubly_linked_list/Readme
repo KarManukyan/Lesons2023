@@ -1,0 +1,30 @@
+A C++ doubly linked list implementation.
+
+Description
+
+In simple terms, a doubly linked list consists of one or more 'nodes'. Each node has a data field (which can contain any data--a primitive value or complex object) and a pointer to the next 'node' and the previous 'node'. This additional pointer to the previous node is what distinguishes a doubly linked list from a singly linked list--a singly linked list only contains a pointer, or reference, to the next node. The major advantage to having pointers to both the next and previous node is that the list can be traversed in both directions, as well as making operations that operate on the 'middle' of the list a bit more efficient since each node has a reference the one before it and the one after it.
+
+Advantages
+
+List will grow dynamically with each node added; no requirement to 'resize' list when it reaches a certain size.
+Flexibility to add or remove nodes at the beginning or end of the list in O(1) time. This is a significant improvement over its singly linked list counterpart.
+
+API
+Available methods for a doubly-linked-list instance:
+
+-push_front(data)
+    Inserts a node (with the provided data) to the front of the list
+-push_back(data)
+    Inserts a node (with the provided data) to the end of the list
+-front()
+    Returns the first node in the list
+-back()
+    Returns the last node in the list
+-print()
+    Returns all data containing in the list
+
+Basic Usage
+
+1.Download the "main.cpp", "doubly_linked_list.cpp", "doubly_linked_list.hpp" and "Makefile" files in the same directory.
+2.For run the "Makefile" and run the program through the terminal using the command "make". 
+3.Use the command "make clean" to remove the intermediate files and the executable file "doubly_linked_list" created as a result of program compilation.
