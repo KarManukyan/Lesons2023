@@ -18,5 +18,16 @@ int main()
 	std::cout<<l.front()<< std::endl;
 	std::cout <<"Last member: ";
 	std::cout<<l.back()<< std::endl;
+	l.pop_front();
+	l.pop_back();
+	l.insert(1,44);
+	l.print();
+	l.reverce();
+	std::cout <<"Reverced list:  " << std::endl;
+	l.print();
+	std::cout <<"First member: ";
+	std::cout<<l.front()<< std::endl;
+	std::cout <<"Last member: ";
+	std::cout<<l.back()<< std::endl;
 	return 0;
 }

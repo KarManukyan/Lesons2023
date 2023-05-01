@@ -24,14 +24,22 @@ public:
 
 	void push_front(int data);		// Adding member from back with given value.
 
-	int front();				// Showing first member
+	void pop_front();			// Deleting first member.
 	
-	int back();				// Showing last member
-	
-	int get_size();				// Showing the size of list
+	void pop_back();			// Deleting last member.
 
-	void print();				// Printing elements of list
+	void insert(int index, int data);	// Inserting new member with given index and given value.
+
+	int front();				// Showing first member.
 	
-	~List();				//Destructer wich is deleted the list
+	int back();				// Showing last member.
+	
+	int get_size();				// Showing the size of list.
+
+	void reverce();
+	
+	void print();				// Printing elements of list.
+	
+	~List();				//Destructer wich is deleted the list.
 
 };
