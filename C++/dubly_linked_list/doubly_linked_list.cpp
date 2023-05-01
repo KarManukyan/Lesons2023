@@ -136,7 +136,7 @@ int List::get_size()								// Returning count of list`s members
 {
 	return size;
 }
-void List::reverce()
+void List::reverce()								// Reversing a list members
 {
 	Node *n = first;
 	Node *tmp = nullptr;

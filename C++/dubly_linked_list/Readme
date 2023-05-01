@@ -16,12 +16,22 @@ Available methods for a doubly-linked-list instance:
     Inserts a node (with the provided data) to the front of the list
 -push_back(data)
     Inserts a node (with the provided data) to the end of the list
+-pop_front()
+    Deleting first member.
+-pop_back()
+    Deleting last member.
+-insert(index, data)
+    Inserting new member with given index and given value.
 -front()
-    Returns the first node in the list
+    Returns the first node in the list.
 -back()
-    Returns the last node in the list
+    Returns the last node in the list.
+-get_size()
+    Showing the size of list.
+-reverce()
+    Revercing a list members.
 -print()
-    Returns all data containing in the list
+    Returns all data containing in the list.
 
 Basic Usage
 

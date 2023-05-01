@@ -36,7 +36,7 @@ public:
 	
 	int get_size();				// Showing the size of list.
 
-	void reverce();
+	void reverce();				// Revercing a list members.
 	
 	void print();				// Printing elements of list.
 	
