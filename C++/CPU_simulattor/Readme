@@ -1,0 +1,12 @@
+This code implements a simple CPU simulator. The CPU has the following components:
+
+A RAM, which stores instructions and data.
+A register file, which stores the CPU's registers.
+A control unit (CU), which fetches instructions from RAM, decodes them, and executes them.
+An arithmetic logic unit (ALU), which performs arithmetic and logical operations.
+
+The following table lists the operations that the CPU can perform:
+
+1: ADD	Add the two operands and store the result in the third operand.
+
+2: SUB Subtract the second operand from the first operand and store the result in  the third operand
