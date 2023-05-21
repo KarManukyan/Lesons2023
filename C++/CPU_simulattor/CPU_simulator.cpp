@@ -112,9 +112,12 @@ class CPU
     		{
       			cu.decode(cu.fetch());
       			cu.execute();
+      		std::cout<<ram.Ram[i]<<std::endl;
     		}
       		std::cout<<ram.Ram[64]<<std::endl;
       		std::cout<<ram.Ram[65]<<std::endl;
+      		std::cout<<ram.Ram[66]<<std::endl;
+
   	}
   
 };
@@ -123,9 +126,9 @@ CPU cpu;
 
 int main()
 {
-  	ram.Ram[64] = 8;
-  	ram.Ram[65] = 5;
-  	int list[] = {1'66'64'65};
+  	ram.write(64, 8);
+  	ram.write(65, 5);
+  	int list[] = {0b0001'10010'1000'1001};
   	int size = sizeof(list) / sizeof(list[0]);
   	cpu.loader(list, size);
   	cpu.exec();
