@@ -12,7 +12,7 @@ endmodule
 module add_to(in_1, in_2, out);
 
 input [7:0] in_1, in_2;
-output [7:0] out;
+output [8:0] out;
 
 wire wire_0, wire_1, wire_2, wire_3;
 
@@ -24,5 +24,5 @@ add add_4(.in_1(in_1[4]), .in_2(in_2[4]), .cerry_in(wire_3), .out(out[4]), .cerr
 add add_5(.in_1(in_1[5]), .in_2(in_2[5]), .cerry_in(wire_4), .out(out[5]), .cerry_out(wire_5));
 add add_6(.in_1(in_1[6]), .in_2(in_2[6]), .cerry_in(wire_5), .out(out[6]), .cerry_out(wire_6));
 add add_7(.in_1(in_1[7]), .in_2(in_2[7]), .cerry_in(wire_6), .out(out[7]), .cerry_out(wire_7));
-
+add add_7(.in_1(in_1[7]), .in_2(in_2[7]), .cerry_in(wire_6), .out(out[8]), .cerry_out(wire_7));
 endmodule

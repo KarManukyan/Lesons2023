@@ -10,7 +10,7 @@ module counter (reset,clk,up_down,enable,load,count);
 
 	always@ (posedge clk) begin
 		if(reset)
-			count <= 1'b0;
+			count <= {size{1'b0}};
 		if (enable) begin
 			if (load)
 				count <= load;
