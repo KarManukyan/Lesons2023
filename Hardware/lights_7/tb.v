@@ -12,7 +12,7 @@ wire led_6;
 wire led_7;
 
 initial begin
-	$dumpfile("tb.vcd");
+	$dumpfile("v.vcd");
 	$dumpvars();
 end
 

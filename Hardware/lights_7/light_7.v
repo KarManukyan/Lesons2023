@@ -80,16 +80,16 @@ always @(*) begin
 		        led_2 <= 1'b0;
 		        led_3 <= 1'b0;
 		        led_4 <= 1'b1;
-		        led_5 <= 1'b0;
-		        led_6 <= 1'b1;
-		        led_7 <= 1'b1;
+		        led_5 <= 1'b1;
+		        led_6 <= 1'b0;
+		        led_7 <= 1'b0;
 		end
 		4'b0101: begin
                         led_1 <= 1'b0;
                         led_2 <= 1'b1;
                         led_3 <= 1'b0;
-                        led_4 <= 1'b1;
-                        led_5 <= 1'b0;
+                        led_4 <= 1'b0;
+                        led_5 <= 1'b1;
                         led_6 <= 1'b0;
                         led_7 <= 1'b0;
                 end
