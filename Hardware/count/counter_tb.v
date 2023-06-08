@@ -25,14 +25,8 @@ module counter_tb;
 		#5 reset = 1'b0;
 		enable = 1'b1;
 		#30 up = 1'b1;
-		$display("reset = %b,enable = %d, up = %b,count = %d", reset,enable,up,count);
-
-		$display("reset = %b,enable = %d, up = %b,count = %d", reset,enable,up,count);
 		#5 up = 1'b0;
-
-		#30
-		$display("reset = %b,enable = %d, up = %b,count = %d", reset,enable,up,count);
-		$finish;
+		#30 $finish;
 	end
 	
 endmodule
