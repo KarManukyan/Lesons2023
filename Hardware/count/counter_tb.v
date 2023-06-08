@@ -1,8 +1,7 @@
 `timescale 1 ns /1 ps
 module counter_tb;
-	parameter SIZE = 8;
+	parameter SIZE = 4;
 	reg clk, reset, up, enable;
-	reg [SIZE-1:0] load;
 	wire [SIZE-1:0] count;
 	wire pulse;
 
@@ -14,39 +13,26 @@ module counter_tb;
 	end
 	
 	initial begin
-		reset = 1'b0;
+		reset = 1'b1;
 		enable = 1'b1;
 		up = 1'b1;
-	end
-
-
-	initial begin 
 		clk = 1'b0; 
-	 	repeat (150) #3 clk= ~clk;
-
 	end
 
-
+	always #1 clk = ~clk;
 	
 	always @(*) begin
-		#3 
-		enable = 1'b0;
-		#3 up = 1'b1;
-		#3 load = 8'b00011111;
-		$display("reset = %b,enable = %d,load = %d, up = %b,count = %d", reset,enable,load,up,count);
-		#3 enable = 1'b1;
+		#5 reset = 1'b0;
+		enable = 1'b1;
+		#30 up = 1'b1;
+		$display("reset = %b,enable = %d, up = %b,count = %d", reset,enable,up,count);
 
-		#3 load = 8'b11111111;
-		#3 reset = 1'b0;
-		#3 load = 8'b00001001;
-		$display("reset = %b,enable = %d,load = %d, up = %b,count = %d", reset,enable,load,up,count);
-		#3 up = 1'b0;
+		$display("reset = %b,enable = %d, up = %b,count = %d", reset,enable,up,count);
+		#5 up = 1'b0;
 
-		#3 load = 8'b00000000;
-
-		#3 up = 1'b0;
-		#3 load = 8'b00011111;
-		$display("reset = %b,enable = %d,load = %d, up = %b,count = %d", reset,enable,load,up,count);
+		#30
+		$display("reset = %b,enable = %d, up = %b,count = %d", reset,enable,up,count);
+		$finish;
 	end
 	
 endmodule

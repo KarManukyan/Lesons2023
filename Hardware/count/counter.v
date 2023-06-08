@@ -1,8 +1,7 @@
-module counter (reset,clk,up_down,enable,load,pulse, count);
+module counter (reset,clk,up_down,enable,pulse, count);
 	
-	parameter size = 8;
+	parameter size = 4;
 	input reset, clk, up_down, enable;
-	input [size-1:0] load;
 	output reg [size -1:0] count;
 	output reg pulse;
 
@@ -10,10 +9,8 @@ module counter (reset,clk,up_down,enable,load,pulse, count);
 		if(reset) begin
 			count <= {size{1'b0}};
 		end
-		if (enable) begin
-			if (load)
-				count <= load;
-			else if (up_down)
+		else if (enable) begin
+			if (up_down)
 				count <= count +1;
 			else
 				count <= count -1;
@@ -21,10 +18,10 @@ module counter (reset,clk,up_down,enable,load,pulse, count);
 	end
 
 	always @(posedge clk) begin
-		if ((count == 8'b11111111) & up_down) begin
+		if ((count == 4'b1110) & up_down) begin
 			pulse <= 1;
 		end
-		else if ((count == 8'b00000000) & (~up_down))
+		else if ((count == 4'b0001) & (~up_down))
 			pulse <= 1;
 		else
 			pulse <= 0;	
